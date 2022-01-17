@@ -1,3 +1,5 @@
+import { getCurrentDate } from "../utils";
+
 function index({ startDate, setStartDate, endDate, setEndDate }) {
   return (
     <section
@@ -15,7 +17,7 @@ function index({ startDate, setStartDate, endDate, setEndDate }) {
           onChange={(e) => setStartDate(e.target.value)}
           value={startDate}
           min="1995-06-16"
-          max="2022-01-15"
+          max={getCurrentDate()}
           className="font-semibold p-1 rounded-xl"
         />
       </div>
@@ -28,7 +30,7 @@ function index({ startDate, setStartDate, endDate, setEndDate }) {
           onChange={(e) => setEndDate(e.target.value)}
           value={endDate}
           min="1995-06-16"
-          max="2022-01-15"
+          max={getCurrentDate()}
           className="font-semibold p-1 rounded-xl"
         />
       </div>
