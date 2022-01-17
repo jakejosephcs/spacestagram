@@ -25,15 +25,10 @@ function Card({ d, handleLikeImage, setModalInfo, setIsModalOpen }) {
           />
         )}
       </div>
-      <h3
-        className="grow my-0.5 font-semibold
-"
-      >
-        {d.title}
-      </h3>
+      <h3 className="card-title grow my-0.5 font-semibold">{d.title}</h3>
       <div className="flex items-center mb-3">
         <CalendarIcon className="h-5 w-5 text-slate-500" />
-        <span className="ml-1 text-sm">{d.date}</span>
+        <span className="card-date ml-1 text-sm">{d.date}</span>
       </div>
       <div className="flex justify-between">
         <button
@@ -41,13 +36,13 @@ function Card({ d, handleLikeImage, setModalInfo, setIsModalOpen }) {
             setModalInfo({ title: d.title, description: d.explanation });
             setIsModalOpen(true);
           }}
-          className="text-sm underline underline-offset-2"
+          className="card-learn text-sm underline underline-offset-2"
         >
           LEARN MORE
         </button>
         <button
           onClick={() => handleLikeImage(d.id)}
-          className={`text-sm underline underline-offset-2  ${
+          className={`card-like text-sm underline underline-offset-2  ${
             d.isLiked ? "text-red-900" : "text-green-700"
           }`}
         >
