@@ -7,11 +7,23 @@ function Card({ d, handleLikeImage, setModalInfo, setIsModalOpen }) {
   return (
     <section className="flex flex-col bg-slate-200 p-4 m-2 w-80 max-w-xl">
       <div className="flex w-full max-h-56 h-52">
-        <img
-          className="object-cover w-96 rounded-md"
-          src={d.url}
-          alt={d.title}
-        />
+        {d.media_type === "video" && (
+          <iframe
+            className="h-full w-[18rem] rounded-md"
+            src={`${d.url}?controls=0`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        )}
+        {d.media_type === "image" && (
+          <img
+            className="object-cover w-96 rounded-md"
+            src={d.url}
+            alt={d.title}
+          />
+        )}
       </div>
       <h3
         className="grow my-0.5 font-semibold
