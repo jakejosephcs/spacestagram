@@ -38,7 +38,7 @@ function App() {
     }
 
     fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=0h15cF2D2m26IDbyqP4Y2WbxRhDTBJAqo6RUFqQX&start_date=${startDate}&end_date=${endDate}`
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&start_date=${startDate}&end_date=${endDate}`
     )
       .then((response) => {
         if (!response.ok) {
