@@ -14,7 +14,9 @@ describe("renders the home page", () => {
 
   it("date picker renders the correct card details", () => {
     cy.get("#start").type("2022-01-16");
+    cy.wait(2000);
     cy.get("#end").type("2022-01-16");
+    cy.wait(2000);
     cy.get(".card-title").contains("Retreating");
     cy.get(".card-date").contains("2022-01-16");
     cy.get(".card-learn").contains("LEARN MORE");
@@ -32,6 +34,7 @@ describe("renders the home page", () => {
 
   it("clicking like likes the image", () => {
     cy.get("#start").type("2022-01-16");
+    cy.wait(2000);
     cy.get("#end").type("2022-01-16");
     cy.wait(2000);
     cy.get(".card-like").click();
@@ -40,6 +43,7 @@ describe("renders the home page", () => {
 
   it("click learn more displays the learn more modal", () => {
     cy.get("#start").type("2022-01-16");
+    cy.wait(2000);
     cy.get("#end").type("2022-01-16");
     cy.wait(2000);
     cy.get(".card-learn").click();
@@ -48,6 +52,7 @@ describe("renders the home page", () => {
 
   it("learn more modal displays the correct information", () => {
     cy.get("#start").type("2022-01-16");
+    cy.wait(2000);
     cy.get("#end").type("2022-01-16");
     cy.wait(2000);
     cy.get(".card-learn").click();
@@ -59,6 +64,7 @@ describe("renders the home page", () => {
 
   it("learn more modal closes when the close button is clicked", () => {
     cy.get("#start").type("2022-01-16");
+    cy.wait(2000);
     cy.get("#end").type("2022-01-16");
     cy.wait(2000);
     cy.get(".card-learn").click();
