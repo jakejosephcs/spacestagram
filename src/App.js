@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import Header from "./Header";
-import Card from "./Card";
+import CardContainer from "./Card/CardContainer";
 import DatePicker from "./DatePicker";
 import Modal from "./Modal";
 import Status from "./Status";
@@ -102,20 +102,13 @@ function App() {
         {error.isError && <Status text={error.errorMessage} />}
         {isLoading && <Status text="Loading..." />}
         {!isLoading && data.length === 0 && <Status text="No results" />}
-        <section className="flex flex-wrap justify-center max-w-5xl mx-auto">
-          {!isLoading &&
-            data?.map((d) => {
-              return (
-                <Card
-                  key={d.id}
-                  d={d}
-                  handleLikeImage={handleLikeImage}
-                  setModalInfo={setModalInfo}
-                  setIsModalOpen={setIsModalOpen}
-                />
-              );
-            })}
-        </section>
+        <CardContainer
+          isLoading={isLoading}
+          data={data}
+          handleLikeImage={handleLikeImage}
+          setModalInfo={setModalInfo}
+          setIsModalOpen={setIsModalOpen}
+        />
       </main>
     </>
   );
