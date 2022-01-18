@@ -7,7 +7,7 @@ import DatePicker from "./DatePicker";
 import Modal from "./Modal";
 import Status from "./Status";
 
-import { getCurrentDate, isValidDate } from "./utils";
+import { augmentData, getCurrentDate, isValidDate } from "./utils";
 
 function App() {
   const [data, setData] = useState([]);
@@ -49,15 +49,7 @@ function App() {
         return response.json();
       })
       .then((fetchedData) => {
-        setData(
-          fetchedData.map((data) => {
-            return {
-              ...data,
-              isLiked: false,
-              id: uuidv4(),
-            };
-          })
-        );
+        setData(augmentData(fetchedData));
         setIsLoading(false);
       })
       .catch((err) => {
