@@ -43,7 +43,7 @@ function Card({ d, handleLikeImage, setModalInfo, setIsModalOpen }) {
         <button
           onClick={() => handleLikeImage(d.id)}
           className={`card-like text-sm underline underline-offset-2  ${
-            d.isLiked ? "text-red-900" : "text-green-700"
+            d.isLiked ? "text-red-900" : "text-green-900"
           }`}
         >
           {d.isLiked ? "UNLIKE" : "LIKE"}
