@@ -38,6 +38,7 @@ There are two ways to interact with this web application:
 - Different UI states (loading, empty, error) to provide a better UX.
 - Accessible and semantic HTML,
   - 100% accessibility score on Lighthouse.
+  - 96% accessibility score on [WebAccessibility.com](https://www.webaccessibility.com/)
   - Use of semantic HTML5 tags (e.g., title, header, main, section).
 
 ## Testing
@@ -95,8 +96,9 @@ This folder structure does not scale well since every new component needs a new 
 |   └───integrations
 |   │   |   main.js
 |   |
-|   └───plugins
-|       |   index.js
+|   └───.
+|       .
+|       .
 |
 └───public
     |   index.html
