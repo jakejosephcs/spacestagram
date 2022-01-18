@@ -104,8 +104,7 @@ function App() {
         {!isLoading && data.length === 0 && <Status text="No results" />}
         <section className="flex flex-wrap justify-center max-w-5xl mx-auto">
           {!isLoading &&
-            data.length !== 0 &&
-            data.map((d) => {
+            data?.map((d) => {
               return (
                 <Card
                   key={d.id}
