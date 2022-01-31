@@ -1,5 +1,7 @@
 
 # Spacetagram
+Update 01/31/2022: There is an [ongoing issue](https://github.com/nasa/apod-api/issues/90) with NASA's APOD API. The newest commit handles this issue by displaying the correct error for a better user experience.
+
 Shopify Front End Developer Intern Challenge - Summer 2022
 
 [Live Website](https://jjspacestagram.netlify.app/) | 
