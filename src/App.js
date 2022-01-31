@@ -42,7 +42,9 @@ function App() {
       .then((response) => {
         if (!response.ok) {
           return response.text().then((text) => {
-            throw new Error(JSON.parse(text).error.message);
+            throw new Error(
+              JSON.parse(text).msg + " | Houston we have a problem :("
+            );
           });
         }
         return response.json();
